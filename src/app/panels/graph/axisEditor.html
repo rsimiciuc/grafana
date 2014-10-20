@@ -15,6 +15,14 @@
         <input type="number" class="input-small" ng-model="panel.grid.leftMax" ng-change="render()" ng-model-onblur />
       </div>
       <div class="editor-option">
+        <label class="small">Tick Decimals</label>
+        <input type="number" class="input-small" ng-model="panel.grid.leftTickDecimals" ng-change="render()" ng-model-onblur />
+      </div>
+      <div class="editor-option">
+        <label class="small">Scaled Decimals</label>
+        <input type="number" class="input-small" ng-model="panel.grid.leftScaledDecimals" ng-change="render()" ng-model-onblur />
+      </div>
+      <div class="editor-option">
         <label class="small">Label</label>
         <input ng-change="get_data()" ng-model-onblur placeholder="" type="text" class="input-medium" ng-model="panel.leftYAxisLabel">
       </div>
@@ -32,6 +40,14 @@
       <div class="editor-option">
         <label class="small">Max / <a ng-click="toggleGridMinMax('rightMax')">Auto <i class="icon-star" ng-show="_.isNull(panel.grid.rightMax)"></i></a></label>
         <input type="number" class="input-small" ng-model="panel.grid.rightMax" ng-change="render()" ng-model-onblur />
+      </div>
+      <div class="editor-option">
+        <label class="small">Tick Decimals</label>
+        <input type="number" class="input-small" ng-model="panel.grid.rightTickDecimals" ng-change="render()" ng-model-onblur />
+      </div>
+      <div class="editor-option">
+        <label class="small">Scaled Decimals</label>
+        <input type="number" class="input-small" ng-model="panel.grid.rightScaledDecimals" ng-change="render()" ng-model-onblur />
       </div>
   </div>
 </div>

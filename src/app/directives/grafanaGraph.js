@@ -325,6 +325,8 @@ function (angular, $, kbn, moment, _, GraphTooltip) {
             show: scope.panel['y-axis'],
             min: scope.panel.grid.leftMin,
             max: scope.panel.percentage && scope.panel.stack ? 100 : scope.panel.grid.leftMax,
+            tickDecimals: scope.panel.grid.leftTickDecimals,
+            scaledDecimals: scope.panel.grid.leftScaledDecimals,
           };
 
           options.yaxes.push(defaults);
@@ -334,6 +336,8 @@ function (angular, $, kbn, moment, _, GraphTooltip) {
             secondY.position = 'right';
             secondY.min = scope.panel.grid.rightMin;
             secondY.max = scope.panel.percentage && scope.panel.stack ? 100 : scope.panel.grid.rightMax;
+            secondY.tickDecimals = scope.panel.grid.rightTickDecimals;
+            secondY.scaledDecimals = scope.panel.grid.rightScaledDecimals;
             options.yaxes.push(secondY);
             configureAxisMode(options.yaxes[1], scope.panel.y_formats[1]);
           }
